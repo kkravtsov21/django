@@ -1,0 +1,125 @@
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <title>Temperature</title>
+    </head>
+    <body>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-10">
+                <h1 class="mt-2">Temperature</h1>
+                <hr class="mt-0 mb-4">
+                {% block content %}
+                    <!-- <p><strong>Sensors:</strong>
+                        <div class="row">
+                            <div class="col-3">
+                                <p class="ml-5">Name</p>
+                                {% for name in name_list %}
+                                <div class="ml-5">{{ forloop.counter }}. {{ name }}</div>
+                                {% endfor %}
+                            </div>
+                            <div class="col-9">
+                                <p class="">Location</p>
+                                {% for loc in loc_list %}
+                                <div class="">{{ loc }}</div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </p> -->
+
+                    <p><strong>Grouped Sensors:</strong>
+                        <div class="row">
+                            <!-- <div class="col-0">
+                                <p>ID</p>
+                            </div> -->
+                            <div class="ml-2 col-1">
+                                <p>Name</p>
+                            </div>
+                            <div class="col-1">
+                                <p>Model</p>
+                            </div>
+                            <div class="col-1">
+                                <p>Location</p>
+                            </div>
+                            <div class="ml-1 col-1">
+                                <p>Group</p>
+                            </div>
+                            <div class="col-1">
+                                <p>Temperature</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <!-- <div class="col-0 text-center">
+                            {% for slv in sl.values %}
+                                <div>{{slv.id}}</div>
+                            {% endfor %}
+                            </div> -->
+
+                            <div class="col-1 text-center">
+                            {% for slv in sl.values %}
+                                <div>{{slv.name}}</div>
+                            {% endfor %}
+                            </div>
+
+                            <div class="ml-2 col-1 text-center">
+                            {% for slv in sl.values %}
+                                <div>{{slv.model}}</div>
+                            {% endfor %}
+                            </div>
+
+                            <div class="col-1 text-center">
+                            {% for slv in sl.values %}
+                                <div>{{slv.location}}</div>
+                            {% endfor %}
+                            </div>
+
+                            <div class="col-1 text-center">
+                            {% for slv in sl.values %}
+                                <div>{{slv.group}}</div>
+                            {% endfor %}
+                            </div>
+
+                            <div class="ml-4 col-1 text-center">
+                            {% for tlv in tl.values %}
+                                <div>{{tlv.temperature}}</div>
+                            {% endfor %}
+                            </div>
+                        </div>
+                            <!-- {% for slv in sl.values %}
+                            <div class="col-2">
+                                <p class="">ID</p>
+                                <div>{{slv.id}}</div>
+                            </div>
+                            <div class="col-2">
+                                <p class="">Name</p>
+                                <div>{{slv.name}}</div>
+                            </div>
+                            <div class="col-2">
+                                <p class="">Model</p>
+                                <div>{{slv.model}}</div>
+                            </div>
+                            <div class="col-2">
+                                <p class="">Location</p>
+                                <div>{{slv.location}}</div>
+                            </div>
+                            <div class="col-2">
+                                <p class="">Group</p>
+                                <div>{{slv.group}}</div>
+                            </div>
+                            {% endfor %} -->
+
+                            <!-- <div class="col-9">
+                                <p class="">Location</p>
+                                {% for loc in loc_list %}
+                                <div class="">{{ loc }}</div>
+                                {% endfor %}
+                            </div> -->
+                    </p>
+                {% endblock %}
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
